@@ -21,7 +21,7 @@ In summary, the VM instance manages the interaction with the storage buckets to 
 
 Input image             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](img_files/family_photo.jpeg)  |  ![](img_files/family_photo.jpeg)
+![](img_files/family_photo.jpeg)  |  ![](img_files/out_family_photo_output.jpeg)
 
 
 ## Prerequisites
