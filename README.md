@@ -17,9 +17,11 @@ This repo shows how to implement an Apache Spark cluster with Cloud Dataproc ser
 In summary, the VM instance manages the interaction with the storage buckets to upload images, submits scala jobs and retrieve outlined faces also stored in the storage bucket.
 
 ### Dataflow diagram
-![plot](img_files/plot_png_example.png)
+![](img_files/GCP_dataproc.png)
 
-Input image             |  Solarized Ocean
+
+### Image processing example
+Input image             |  Output image
 :-------------------------:|:-------------------------:
 ![](img_files/family_photo.jpeg)  |  ![](img_files/out_family_photo_output.jpeg)
 
