@@ -24,7 +24,7 @@ This repo shows how to implement an Apache Spark cluster with Cloud Dataproc ser
 ### Image processing example
 Input image             |  Output image
 :-------------------------:|:-------------------------:
-![](img_files/family_photo.jpeg)  |  ![](img_files/out_family_photo_output.jpeg)
+![](img_files/family_photo.jpeg)  |  ![](img_files/out_family_photo.jpeg)
 
 
 ## Prerequisites
@@ -34,7 +34,6 @@ Input image             |  Output image
 
 Replace `{project-number}` with your project number.
 For **Role**, select **Project (or Basic)** > **Editor**. Click **Save**.
-
 
 ## Guide to deploy the services (vm, cloud storage and cloud dataproc cluster)
 
@@ -105,15 +104,7 @@ Click **Create**. This will serve as your development host.
     gs://${MYBUCKET}/haarcascade_frontalface_default.xml \
     gs://${MYBUCKET}/imgs/ \
     gs://${MYBUCKET}/out/`
-  
-
-
-
-
-
-
 
 ## Links to documentation
 
-> Flask :  https://flask.palletsprojects.com/en/1.1.x/    
-> Containers and Docker : https://www.docker.com/resources/what-container.
+To Be Completed.
