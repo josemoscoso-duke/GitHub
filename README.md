@@ -37,27 +37,27 @@ For **Role**, select **Project (or Basic)** > **Editor**. Click **Save**.
 
 ## Guide to deploy the services (vm, cloud storage and cloud dataproc cluster)
 
-1. Create a development machine in Compute Engine
+1. Create a development machine in Compute Engine  
 
-  1. **Compute Engine** > **VM Instances** > **Create**
-  1. Use the following parameters, as detailed in the referenced [qwiklab]((https://www.qwiklabs.com/focuses/5834?catalog_rank=%7B%22rank%22%3A8%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=9364283)  
-    Name: devhost
-    Series: N1
-    Machine Type: 2 vCPUs (n1-standard-2 instance)
-    Identity and API Access: Allow full access to all Cloud APIs.
+  a. **Compute Engine** > **VM Instances** > **Create**  
+  b. Use the following parameters, as detailed in the referenced [qwiklab]((https://www.qwiklabs.com/focuses/5834?catalog_rank=%7B%22rank%22%3A8%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=9364283)    
+    Name: devhost  
+    Series: N1  
+    Machine Type: 2 vCPUs (n1-standard-2 instance)  
+    Identity and API Access: Allow full access to all Cloud APIs.  
 
-Click **Create**. This will serve as your development host.
+Click **Create**. This will serve as your development host.  
 
-2. Install software (sbt and scala) to submit jobs to the cluster
+2. Install software (sbt and scala) to submit jobs to the cluster  
 
-  1. `sudo apt-get install -y dirmngr unzip`
-  1. `sudo apt-get update`
-  1. `sudo apt-get install -y apt-transport-https`
-  1. `echo "deb https://dl.bintray.com/sbt/debian /" | \
-       sudo tee -a /etc/apt/sources.list.d/sbt.list`
-  1. `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 recv 642AC823`
-  1. `sudo apt-get update`
-  1. `sudo apt-get install -y bc scala sbt`
+  a. `sudo apt-get install -y dirmngr unzip`  
+  b. `sudo apt-get update`  
+  c. `sudo apt-get install -y apt-transport-https`  
+  d. `echo "deb https://dl.bintray.com/sbt/debian /" | \
+       sudo tee -a /etc/apt/sources.list.d/sbt.list`  
+  e. `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 recv 642AC823`  
+  f. `sudo apt-get update`  
+  g. `sudo apt-get install -y bc scala sbt`  
 
 3. Download the feature detector files and build the JAR
 
