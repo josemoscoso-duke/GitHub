@@ -18,8 +18,8 @@ This repo shows how to implement an Apache Spark cluster with Cloud Dataproc ser
 
 
 ### Dataflow diagram
-![](img_files/GCP_dataproc.png)
-
+<!--- [](img_files/GCP_dataproc.png) --->
+<img src=img_files/GCP_dataproc.png width="100" height="100">
 
 ### Image processing example
 Input image             |  Output image
