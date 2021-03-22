@@ -58,7 +58,6 @@ Click **Create**. This will serve as your development host.
   - `sudo apt-get install -y bc scala sbt`  
 
 3. Download the feature detector files and build the JAR
-
   - `sudo apt-get update`
   - `gsutil cp gs://spls/gsp124/cloud-dataproc.zip .
      unzip cloud-dataproc.zip`
@@ -67,21 +66,18 @@ Click **Create**. This will serve as your development host.
 4. Launch the build: `sbt assembly`
 
 5. Create a cloud Storage bucket
-
   - `GCP_PROJECT=$(gcloud config get-value core/project)`
   - `MYBUCKET="${USER//google}-image-${RANDOM}"`
   - `echo MYBUCKET=${MYBUCKET}`
   - `gsutil mb gs://${MYBUCKET}`
 
 6. Download images and upload them into the GCP Bucket
-
-  - This is only an example:  
+  - This is only an example. I uploaded a different set of images:  
     `curl https://www.publicdomainpictures.net/pictures/10000/velka/296-1246658839vCW7.jpg | gsutil cp - gs://${MYBUCKET}/imgs/classroom.jpg`
   - Check buckets content:  
     `gsutil ls -R gs://${MYBUCKET}`
 
 7. Create a Cloud Dataproc cluster
-
   - `MYCLUSTER="${USER/_/-}-qwiklab"`
   - `echo MYCLUSTER=${MYCLUSTER}`
   - Set a global Compute Engine region to use and create a new cluster:  
@@ -89,7 +85,6 @@ Click **Create**. This will serve as your development host.
     * `gcloud dataproc clusters create ${MYCLUSTER} --bucket=${MYBUCKET} --worker-machine-type=n1-standard-2 --master-machine-type=n1-standard-2 --initialization-actions=gs://spls/gsp010/install-libgtk.sh --image-version=2.0`  
 
 8. Submit a job to Cloud dataproc  
-
   - Load face detection configuration file:  
   `curl https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml | gsutil cp - gs://${MYBUCKET}/haarcascade_frontalface_default.xml`
   - Set of images uploaded into the imgs directory in your Cloud Storage bucket as input to your Feature Detector:  
@@ -101,6 +96,6 @@ Click **Create**. This will serve as your development host.
     gs://${MYBUCKET}/imgs/ \
     gs://${MYBUCKET}/out/`
 
-## Links to documentation
-
-To Be Completed.
+9. Monitor job and check performance
+  - To monitor job, go to **Navigation menu** > **Dataproc** > **Jobs**  
+  - To check performance, go to the storage bucket, to **Navigation menu** > **Storage** and locate the bucket. Images with outlined faces will be in the out/ directory
