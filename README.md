@@ -39,12 +39,12 @@ For **Role**, select **Project (or Basic)** > **Editor**. Click **Save**.
 
 1. Create a development machine in Compute Engine  
 
-  a. **Compute Engine** > **VM Instances** > **Create**  
-  b. Use the following parameters, as detailed in the referenced [qwiklab]((https://www.qwiklabs.com/focuses/5834?catalog_rank=%7B%22rank%22%3A8%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=9364283)    
-    Name: devhost  
-    Series: N1  
-    Machine Type: 2 vCPUs (n1-standard-2 instance)  
-    Identity and API Access: Allow full access to all Cloud APIs.  
+  1. **Compute Engine** > **VM Instances** > **Create**  
+  2. Use the following parameters, as detailed in the referenced [qwiklab]((https://www.qwiklabs.com/focuses/5834?catalog_rank=%7B%22rank%22%3A8%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=9364283)    
+      * Name: devhost  
+      * Series: N1  
+      * Machine Type: 2 vCPUs (n1-standard-2 instance)  
+      * Identity and API Access: Allow full access to all Cloud APIs.  
 
 Click **Create**. This will serve as your development host.  
 
